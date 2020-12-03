@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MPI1_II_2020</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="dialog">Dialog</string>
+    <string name="go_to_2nd">Go to second</string>
+    <string name="go_to_1">Go to first</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="members">Group’s Martins Dialog</string>
+    <array name="students">
+        <item>Martins 1</item>
+        <item>Martins 2</item>
+        <item>Martins 3</item>
+    </array>
+</resources>
