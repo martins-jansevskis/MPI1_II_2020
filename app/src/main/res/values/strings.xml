@@ -13,8 +13,8 @@
     <string name="cancel">Cancel</string>
     <string name="members">Group’s Martins Dialog</string>
     <array name="students">
-        <item>Martins 1</item>
-        <item>Martins 2</item>
-        <item>Martins 3</item>
+        <item>Martins uzvards 1</item>
+        <item>Martins uzvards 2</item>
+        <item>Martins uzvards 3</item>
     </array>
 </resources>

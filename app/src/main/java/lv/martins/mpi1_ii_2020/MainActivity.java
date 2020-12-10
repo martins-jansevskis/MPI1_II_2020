@@ -3,8 +3,10 @@ package lv.martins.mpi1_ii_2020;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,9 +18,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        String[] studentsArray = getResources().getStringArray(R.array.students);
+
+        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+
+        int value = sharedPref.getInt("NEW_SCORE", 0);
+        Toast.makeText(this, "Preference value " + value, Toast.LENGTH_LONG).show();
+
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt("NEW_SCORE", 150);
+        editor.apply();
 
         Button dialog = findViewById(R.id.dialog);
-        String[] studentsArray = getResources().getStringArray(R.array.students);
         dialog.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Use the Builder class for convenient dialog construction
